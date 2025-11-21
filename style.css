@@ -23,13 +23,13 @@ body{
 }
 
 .card{
-  background: rgba(17,18,24,0.9);
-  border:1px solid var(--line);
+  background: var(--card);
+  border: 1px solid var(--line);
   border-radius: 18px;
   padding: clamp(26px, 4vw, 46px);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.45);
-  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
+
 
 h1{
   margin:0 0 10px 0;
@@ -81,6 +81,7 @@ a:hover{border-bottom-color:var(--text)}
 @media (max-width: 640px){
   .meta{grid-template-columns: 1fr;}
 }
+
 
 
 
