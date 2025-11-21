@@ -1,36 +1,54 @@
+/* -------------------------------------------------------
+   Grundfarben & Variablen
+   ------------------------------------------------------- */
 :root{
-  --bg: #ffffff;      /* Hintergrund Seite */
-  --card: #f5f5f5;    /* Hellgraue Box */
-  --text: #111111;    /* Dunkler Text */
-  --muted: #555555;   /* Sekundärtext */
-  --line: #dcdcdc;    /* Rahmenlinien */
+  --bg: #ffffff;          /* Hintergrund der Seite (weiß) */
+  --card: #f5f5f5;        /* große Box (hellgrau) */
+  --smallcard: #b6c7e0;   /* kleine Karten (blau) */
+  --text: #111111;        /* normaler Text */
+  --muted: #555555;       /* sekundärer Text */
+  --line: #dcdcdc;        /* Linien & Rahmen */
 }
 
-*{box-sizing:border-box}
+/* -------------------------------------------------------
+   Basis-Setup
+   ------------------------------------------------------- */
+*{
+  box-sizing:border-box;
+}
+
 body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color:var(--text);
-  background: var(--bg);
+  background: var(--bg);         /* weißer Hintergrund */
   min-height:100vh;
   display:grid;
-  place-items:center;
+  place-items:center;            /* zentriert alles */
 }
 
+/* -------------------------------------------------------
+   Wrapper
+   ------------------------------------------------------- */
 .wrap{
   width:min(920px, 92vw);
   padding: clamp(20px, 4vw, 48px);
 }
 
+/* -------------------------------------------------------
+   GROSSE BOX (Coming-Soon Container)
+   ------------------------------------------------------- */
 .card{
-  background: var(--card);
-  border: 1px solid var(--line);
+  background: var(--card);       /* hellgrau */
+  border:1px solid var(--line);
   border-radius: 18px;
   padding: clamp(26px, 4vw, 46px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12); /* dezenter Schatten */
 }
 
-
+/* -------------------------------------------------------
+   Texte & Typografie
+   ------------------------------------------------------- */
 h1{
   margin:0 0 10px 0;
   font-size: clamp(28px, 4vw, 44px);
@@ -44,6 +62,9 @@ p{
   line-height:1.5;
 }
 
+/* -------------------------------------------------------
+   KLEINE BOXEN: Start + Kontakt
+   ------------------------------------------------------- */
 .meta{
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -52,14 +73,14 @@ p{
 }
 
 .meta > div{
-  background: var(--card);
+  background: var(--smallcard);   /* blau */
   border:1px solid var(--line);
   border-radius: 12px;
   padding:14px 16px;
 }
 
 .label{
-  color:var(--muted);
+  color:var(--muted);             /* hellgrauer Labeltext */
   font-size:12px;
   text-transform: uppercase;
   letter-spacing: .08em;
@@ -68,20 +89,36 @@ p{
 
 .value{
   font-size:16px;
+  color: var(--text);
 }
 
-a{color:var(--text); text-decoration:none; border-bottom:1px solid var(--muted)}
-a:hover{border-bottom-color:var(--text)}
+/* -------------------------------------------------------
+   Links
+   ------------------------------------------------------- */
+a{
+  color:var(--text);
+  text-decoration:none;
+  border-bottom:1px solid var(--muted);
+}
 
+a:hover{
+  border-bottom-color:var(--text);
+}
+
+/* -------------------------------------------------------
+   Footer
+   ------------------------------------------------------- */
 .footer{
   margin-top: 22px;
   color:var(--muted);
   font-size: 13px;
 }
+
+/* -------------------------------------------------------
+   Responsiveness
+   ------------------------------------------------------- */
 @media (max-width: 640px){
-  .meta{grid-template-columns: 1fr;}
+  .meta{
+    grid-template-columns: 1fr;  /* untereinander bei Handy */
+  }
 }
-
-
-
-
