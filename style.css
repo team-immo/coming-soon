@@ -46,6 +46,27 @@ body{
   box-shadow: 0 10px 30px rgba(0,0,0,0.12); /* dezenter Schatten */
 }
 
+
+/* -------------------------------------------------------
+   Top-Link auf Unterseiten (Impressum/Datenschutz)
+   ------------------------------------------------------- */
+.toplink{
+  display:inline-block;                 /* macht’s wie einen kleinen Button */
+  margin-bottom: 14px;                  /* Abstand zur Überschrift */
+  padding: 8px 12px;
+  background: #ffffff;                  /* neutral, passt zur Seite */
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--text);
+  text-decoration: none;               /* kein Standard-Underline */
+}
+
+.toplink:hover{
+  background: #f0f0f0;                  /* dezentes Hover */
+}
+
+
 /* -------------------------------------------------------
    Texte & Typografie
    ------------------------------------------------------- */
@@ -56,11 +77,12 @@ h1{
 }
 
 p{
-  margin:0 0 26px 0;
+  margin:0 0 30px 0;                   /* vorher 26px */
   color:var(--muted);
   font-size: clamp(16px, 2.2vw, 18px);
   line-height:1.5;
 }
+
 
 /* -------------------------------------------------------
    KLEINE BOXEN: Start + Kontakt
@@ -69,23 +91,26 @@ p{
   display:grid;
   grid-template-columns: 1fr 1fr;
   gap:14px;
-  margin-top: 10px;
+  margin-top: 14px;                    /* vorher 10px */
 }
 
+
 .meta > div{
-  background: var(--smallcard);   /* blau */
+  background: var(--smallcard);         /* blau */
   border:1px solid var(--line);
   border-radius: 12px;
   padding:14px 16px;
+  color: #0e1a2b;                       /* etwas dunklerer Text nur in Karten */
 }
 
 .label{
-  color:var(--muted);             /* hellgrauer Labeltext */
+  color: rgba(14,26,43,0.7);            /* dezenter, aber passend zum Blau */
   font-size:12px;
   text-transform: uppercase;
   letter-spacing: .08em;
   margin-bottom:6px;
 }
+
 
 .value{
   font-size:16px;
@@ -93,17 +118,17 @@ p{
 }
 
 /* -------------------------------------------------------
-   Links
+   Links (Standard)
    ------------------------------------------------------- */
 a{
   color:var(--text);
-  text-decoration:none;
-  border-bottom:1px solid var(--muted);
+  text-decoration:none;                /* keine Linie im Normalzustand */
 }
 
 a:hover{
-  border-bottom-color:var(--text);
+  text-decoration:underline;           /* erst bei Hover */
 }
+
 
 /* -------------------------------------------------------
    Footer
@@ -122,3 +147,4 @@ a:hover{
     grid-template-columns: 1fr;  /* untereinander bei Handy */
   }
 }
+
