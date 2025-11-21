@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impressum</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <h1>Impressum</h1>
+
+      <p><strong>Angaben gemäß § 5 TMG</strong></p>
+      <p>
+        Matthes Kellermann<br>
+        kellermann.immo<br>
+        E-Mail: <a href="mailto:anfrage@kellermann.immo">anfrage@kellermann.immo</a>
+      </p>
+
+      <p><strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</strong><br>
+      Matthes Kellermann</p>
+
+      <p><strong>Haftung für Inhalte</strong><br>
+      Ich bin für eigene Inhalte auf dieser Website nach den allgemeinen Gesetzen verantwortlich. 
+      Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehme ich keine Gewähr.</p>
+
+      <p><strong>Haftung für Links</strong><br>
+      Diese Website enthält keine externen Links.</p>
+
+      <p><strong>Urheberrecht</strong><br>
+      Die auf dieser Website veröffentlichten Inhalte unterliegen dem deutschen Urheberrecht. 
+      Jegliche Verwendung außerhalb der Grenzen des Urheberrechts bedarf meiner schriftlichen Zustimmung.</p>
+
+      <footer class="footer">
+        © <span id="y"></span> Matthes Kellermann
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
